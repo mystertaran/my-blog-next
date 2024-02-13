@@ -2,6 +2,7 @@ import "./globals.css";
 import { c } from "../utils/index";
 import type { Metadata } from "next";
 import { Inter, Manrope } from "next/font/google";
+import Header from "@/components/header/header";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -33,6 +34,7 @@ export default function RootLayout({
           "font-mr bg-light dark:bg-dark"
         )}
       >
+        <Header />
         {children}
       </body>
     </html>
