@@ -1,10 +1,10 @@
-
+import Logo from "./logo"
 
 const Header = () => {
   return (
-    <div>
-      
-    </div>
+    <header className="w-full p-4 px-10 flex items-center justify-between">
+      <Logo />
+    </header>
   )
 }
 
