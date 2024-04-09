@@ -2,6 +2,7 @@ import { sortBlogs } from "@/utils";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Tag from "../elements/tag";
 
 const CoverSection = ({ blogs }) => {
   const sortedBlogs = sortBlogs(blogs);
@@ -20,7 +21,7 @@ const CoverSection = ({ blogs }) => {
           className="w=full rounded-3x1 h-full object-cover object-center"
         />
         <div className="z-0 flex w-3/4 flex-col items-start justify-center p-16 text-light">
-          <Link href={`/categories/${blog.tags}`}>{blog.tags}</Link>
+          <Tag link={`/categories/${blog.tags}`} name={blog.tags} />
           <h1>{blog.title}</h1>
           <p>{blog.description}</p>
         </div>
