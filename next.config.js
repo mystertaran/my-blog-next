@@ -1,4 +1,16 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const { withContentlayer } = require("next-contentlayer");
 
-module.exports = nextConfig
+const nextConfig = {
+  async rewrites() {
+    return [
+      // Serwowanie plików statycznych z folderu files
+      {
+        source: '/files/:path*',
+        destination: '/files/:path*',
+      },
+    ];
+  },
+};
+
+module.exports = withContentlayer(nextConfig);
