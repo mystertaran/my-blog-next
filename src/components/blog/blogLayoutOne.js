@@ -5,11 +5,12 @@ import Image from 'next/image'
 
 
 const BlogLayoutOne = ({ blog }) => {
+  const imagePath = blog.image.filePath.replace("../public", "");
   return (
     <div className="inline-block overflow-hidden rounded-xl">
       <div className="rounded-3x1 absolute bottom-0 left-0 right-0 top-0 -z-10 h-full bg-gradient-to-b from-transparent from-0% to-dark/90" />
       <Image
-        // src={imagePath}
+        src={imagePath}
         placeholder="blur"
         blurDataURL={blog.image.blurhashDataUrl}
         alt={blog.title}
