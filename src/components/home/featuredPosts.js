@@ -16,10 +16,10 @@ const FeaturedPosts = ({ blogs }) => {
           <BlogLayoutOne blog={sortedBlogs[2]} />
         </article>
         <article className="relative col-span-1 row-span-1">
-          <BlogLayoutTwo />
+          <BlogLayoutTwo blog={sortedBlogs[3]} />
         </article>
         <article className="relative col-span-1 row-span-1">
-          blog layout 2
+          <BlogLayoutTwo blog={sortedBlogs[4]} />
         </article>
       </div>
     </section>
