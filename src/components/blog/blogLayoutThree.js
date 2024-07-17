@@ -3,9 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const BlogLayoutTwo = ({ blog }) => {
+const BlogLayoutThree = ({ blog }) => {
   return (
-    <div className="text-dark group grid grid-cols-12 items-center gap-4 ">
+    <div className="group flex flex-col items-center text-dark">
       <Link
         href={blog.url}
         className=" col-span-12  h-full overflow-hidden rounded-xl lg:col-span-4"
@@ -17,12 +17,11 @@ const BlogLayoutTwo = ({ blog }) => {
           alt={blog.title}
           width={blog.image.width}
           height={blog.image.height}
-          className="ease aspect-square h-full w-full object-cover object-center transition-all duration-300 group-hover:scale-105"
-          sizes="(max-width: 640px) 100vw,(max-width: 1024px) 50vw, 33vw"
+          className="aspect-[4/3] w-full h-full object-cover object-center group-hover:scale-105 transition-all ease duration-300"
         />
       </Link>
 
-      <div className="col-span-12  w-full lg:col-span-8">
+      <div className="flex flex-col w-full mt-4">
         <span className="inline-block w-full text-xs font-semibold uppercase text-accent sm:text-sm dark:text-accentDark">
           {blog.tags[0]}
         </span>
@@ -45,4 +44,4 @@ const BlogLayoutTwo = ({ blog }) => {
   );
 };
 
-export default BlogLayoutTwo;
+export default BlogLayoutThree;
