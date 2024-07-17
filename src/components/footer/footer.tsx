@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
       <Socials />
       <div className="relative mt-16 flex w-full flex-col items-center justify-between border-t border-solid border-light px-8 py-6 font-medium md:mt-24 md:flex-row">
         <span className="text-center">
-          &copy;2023 CodeBucks. All rights reserved.
+          &copy;2024 DevTaran. All rights reserved.
         </span>
         <Link
           href="/sitemap.xml"
@@ -60,11 +60,11 @@ const Footer: React.FC = () => {
         <div className="text-center">
           Made with &hearts; by{" "}
           <a
-            href="https://devdreaming.com"
+            href="https://sdconcept.pl"
             className="underline"
             target="_blank"
           >
-            CodeBucks
+            SD Concept
           </a>
         </div>
       </div>
