@@ -4,8 +4,6 @@ import { useForm, SubmitHandler, FieldValues } from "react-hook-form";
 import Link from "next/link";
 import Socials from "../header/socials";
 
-import siteMetadata from "@/src/utils/siteMetaData";
-
 interface FormData {
   email: string;
 }
