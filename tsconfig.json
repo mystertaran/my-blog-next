@@ -24,6 +24,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", ".contentlayer/generated", "src/components/home/coverSection.js", "src/utils/index.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", ".contentlayer/generated", "src/components/home/coverSection.js", "src/utils/index.js", "src/app/blogs/[slug]/page.js"],
   "exclude": ["node_modules"]
 }
