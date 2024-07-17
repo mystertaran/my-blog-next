@@ -3,6 +3,7 @@ import { c } from "../utils/index";
 import type { Metadata } from "next";
 import { Inter, Manrope } from "next/font/google";
 import Header from "@/components/header/header";
+import Footer from "@/components/footer/footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body className={c(inter.variable, manrope.variable, "bg-light font-mr")}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
