@@ -1,6 +1,7 @@
 import Tag from "@/components/elements/tag";
 import Image from "next/image";
-import BlogDetails from "@/components/blog/blogDetails"
+import BlogDetails from "@/components/blog/blogDetails";
+import RenderMdx from "@/components/blog/renderMdx";
 import { allBlogs } from "contentlayer/generated";
 
 export default function BlogPage({ params }) {
@@ -10,8 +11,8 @@ export default function BlogPage({ params }) {
 
   return (
     <article>
-      <div className="mb-8 text-center relative w-full h-[70vh] bg-dark">
-        <div className="w-full z-10 flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <div className="relative mb-8 h-[70vh] w-full bg-dark text-center">
+        <div className="absolute left-1/2 top-1/2 z-10 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center">
           <Tag
             name={blog.tags[0]}
             link={`/categories/${blog.tags[0]}`}
@@ -21,7 +22,7 @@ export default function BlogPage({ params }) {
             {blog.title}
           </h1>
         </div>
-        <div className="absolute top-0 left-0 right-0 bottom-0 h-full bg-dark/60" />
+        <div className="absolute bottom-0 left-0 right-0 top-0 h-full bg-dark/60" />
         <Image
           src={blog.image.filePath.replace("../public", "")}
           placeholder="blur"
@@ -30,8 +31,14 @@ export default function BlogPage({ params }) {
           width={blog.image.width}
           height={blog.image.height}
           className="aspect-square h-full w-full object-cover object-center"
-        /></div>
-        <BlogDetails blog={blog} slug={params.slug}/>
+        />
+      </div>
+      <BlogDetails blog={blog} slug={params.slug} />
+
+      <div className="mt-8 grid grid-cols-12 gap-16 px-10">
+        <div className="col-span-4">Toc</div>
+        <RenderMdx blog={blog} />
+      </div>
     </article>
   );
 }
