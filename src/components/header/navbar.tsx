@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav
       className="fixed right-1/2 top-12 flex w-max translate-x-1/2 
         items-center rounded-full border border-solid border-gray bg-light/80 px-8 py-3 font-medium capitalize
-        shadow-md backdrop-blur-sm"
+        shadow-md backdrop-blur-sm z-50"
     >
       <Link href="/" className="mr-2">
         Home
